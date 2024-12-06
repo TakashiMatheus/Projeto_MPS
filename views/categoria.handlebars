@@ -1,0 +1,20 @@
+<main>
+        <div id="jobs-container" class="container">
+            <div class="row">
+                <div class="class col-md-12"></div>
+                <h2 id="job-list-title">Categorias</h2>
+                <ul id="job-list" class="list-group">
+                    {{#if categorias}}
+                        {{#each categorias}}
+                        <li class="list-group-item new-job">
+                            <h1>{{dataValues.nome}}</h1>
+                        </li>
+                        {{/each}}
+                    {{else}}
+                        <h2 class="list-group-item new-job">Não há categorias cadastradas</h2>
+                    {{/if}}
+                    <a class="btn btn-primary" href="/cadastro/categoria">Cadastrar Categoria</a>
+                </ul>
+            </div>
+        </div>
+    </main>

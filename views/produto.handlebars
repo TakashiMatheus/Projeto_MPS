@@ -1,0 +1,28 @@
+<main>
+        <div id="jobs-container" class="container">
+            <div class="row">
+                <div class="class col-md-12"></div>
+                <h2 id="job-list-title">Produtos</h2>
+                <ul id="job-list" class="list-group">
+                    {{#if produtos}}
+                        {{#each produtos}}
+                        <li class="list-group-item new-job">
+                            <h1>{{nome}}</h1>
+                            <p>Estoque Mínimo: {{estoque_minimo}}</p>
+                            <p>Valor: R${{valor}}</p>
+                            <p>Categoria: {{categoriaNome}}</p>
+                        </li>
+                        {{/each}}
+                        <a class="btn btn-primary" href="/cadastro/produto">Cadastrar Produto</a>
+                    {{else}}
+                        {{#if categorias}}
+                            <h2 class="list-group-item new-job">Não há produtos cadastrados</h2>
+                            <a class="btn btn-primary" href="/cadastro/produto">Cadastrar Produto</a>
+                        {{else}}
+                            <h2 class="list-group-item new-job">É necessário cadastrar uma Categoria</h2>
+                        {{/if}}
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+    </main>
